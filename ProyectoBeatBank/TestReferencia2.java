@@ -8,7 +8,7 @@ public class TestReferencia2 {
         hernan.nombre = "Hernan";
         hernan.documento = "1016065162";
         hernan.telefono = "3204908455";
-        hernan.sexo = "Masculino";
+       
 
         Cuenta cuentaHernan = new Cuenta();
         cuentaHernan.setAgencia(1);

@@ -4,7 +4,7 @@ class Cuenta {
     private double saldo;
     private int agencia;
     private int numero;
-    Cliente titular = new Cliente();
+    private Cliente titular = new Cliente();
     
 
     // no retorna un valor
@@ -55,6 +55,14 @@ class Cuenta {
             System.out.println("No estan permitidos valores negativos");
     }
 }
+
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
+    }
+
+    public Cliente getTitular() {
+        return titular;
+    }
 }
 
 
