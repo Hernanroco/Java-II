@@ -6,10 +6,26 @@ class Cuenta {
     private int numero;
     private Cliente titular = new Cliente();
     
+    private static int total = 0;// por medio de esta line podemos aumentar el numero de cuentas creadas
+
+
+    public Cuenta( int agencia) {
+        // es un metodo que nos va retoranr nuestro objeto cuenta    
+        if (agencia <= 0) {
+            System.out.println("No se permite 0");
+            this.agencia = 1;
+        } else {
+            this.agencia = agencia;
+        }
+        total++;
+        System.out.println("Se van creando " + total + " cuentas");
+
+    }
+    
 
     // no retorna un valor
     public void depositar(double valor){
-        this.saldo += valor;
+        this.saldo = this.saldo + valor;
     }
 
     // retorna valor
@@ -36,13 +52,6 @@ class Cuenta {
         return this.saldo;
 }
 
-    public void setAgencia(int agencia){
-        if (agencia > 0) {
-            this.agencia = agencia;
-    }  else{
-            System.out.println("No estan permitidos valores negativos");
-    }
-}
 
     public int getAgencia() {
         return agencia;

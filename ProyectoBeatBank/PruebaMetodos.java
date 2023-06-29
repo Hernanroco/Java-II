@@ -3,7 +3,7 @@ package ProyectoBeatBank;
 public class PruebaMetodos {
     
     public static void main(String[] args) {
-        Cuenta miCuenta = new Cuenta();
+        Cuenta miCuenta = new Cuenta(4);
         miCuenta.depositar(300);
 
         System.out.println(miCuenta.getSaldo());
@@ -11,7 +11,7 @@ public class PruebaMetodos {
         miCuenta.retirar(100);
         System.out.println(miCuenta.getSaldo());
 
-        Cuenta CuentaFernanda = new Cuenta();
+        Cuenta CuentaFernanda = new Cuenta(5);
         CuentaFernanda.depositar(1000);
 
         boolean puedeTranferir = CuentaFernanda.transferir(200, miCuenta);

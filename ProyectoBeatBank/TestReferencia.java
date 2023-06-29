@@ -3,7 +3,7 @@ package ProyectoBeatBank;
 public class TestReferencia {
     
     public static void main(String[] args) {
-        Cuenta primeraCuenta = new Cuenta();
+        Cuenta primeraCuenta = new Cuenta(6);
         primeraCuenta.depositar(100);
         System.out.println("Saldo primera cuenta: " + primeraCuenta.getSaldo());
 
